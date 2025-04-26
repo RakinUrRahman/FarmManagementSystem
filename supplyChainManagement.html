@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain Management</title>
+    <link rel="stylesheet" href="supplyChainManagement.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="headerRight">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="#">Crop Management</a></li>
+            <li><a href="#">Task Automation</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Data Analytics & Reports</a></li>
+            <li><a href="#">Marketplace Integration</a></li>
+            <li><a href="#">Community Forum & Chat</a></li>
+            <li><a href="expert.html">Expert Consultation</a></li>
+            <li><a href="sustainability.html">Sustainability Score</a></li>
+            <li><a href="#">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <main class="mainContent">
+        <h2>Supply Chain Management for Rooftop Farming</h2>
+        <p>Manage your inventory, track distribution, and monitor sales for effective rooftop farm supply chain management.</p>
+
+        <div class="formSection">
+            <h3>Enter Supply Chain Details</h3>
+            <form id="scmForm">
+                <!-- Product Details -->
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" placeholder="Enter product name (e.g., Tomatoes, Lettuce)" required>
+
+                <!-- Quantity Available -->
+                <label for="quantityAvailable">Quantity Available (Units):</label>
+                <input type="number" id="quantityAvailable" name="quantityAvailable" placeholder="Enter quantity available" required>
+
+                <!-- Minimum Stock Level -->
+                <label for="minStock">Minimum Stock Level (Units):</label>
+                <input type="number" id="minStock" name="minStock" placeholder="Enter minimum stock level" required>
+
+                <!-- Distribution Deadline -->
+                <label for="distributionDeadline">Distribution Deadline:</label>
+                <input type="date" id="distributionDeadline" name="distributionDeadline" required>
+
+                <!-- Sales Tracking -->
+                <label for="salesTracking">Sales Tracking Method:</label>
+                <select id="salesTracking" name="salesTracking" required>
+                    <option value="manual">Manual Tracking</option>
+                    <option value="automated">Automated Sales System</option>
+                    <option value="none">No Sales Tracking</option>
+                </select>
+
+                <!-- Supply Chain Alerts -->
+                <label for="alerts">Alert for Low Inventory:</label>
+                <select id="alerts" name="alerts" required>
+                    <option value="yes">Yes, send low inventory alerts</option>
+                    <option value="no">No alerts</option>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Supply Chain Details</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="supplyChainManagement.js"></script>
+</body>
+</html>

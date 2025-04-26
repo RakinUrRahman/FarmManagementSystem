@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Consultation - Farmo</title>
+    <link rel="stylesheet" href="expert.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="#">Crop Management</a></li>
+            <li><a href="#">Task Automation</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Data Analytics & Reports</a></li>
+            <li><a href="#">Marketplace Integration</a></li>
+            <li><a href="#">Community Forum & Chat</a></li>
+            <li><a class="active" href="expert.html">Expert Consultation</a></li>
+            <li><a href="sustainability.html">Sustainability Score</a></li>
+            <li><a href="supply.html">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Book a Consultation</h2>
+        <form class="consultation-form">
+            <label for="farmerName">Farmer Name</label>
+            <input type="text" id="farmerName" required>
+
+            <label for="farmLocation">Farm Location</label>
+            <input type="text" id="farmLocation" required>
+
+            <label for="expertiseArea">Area of Concern</label>
+            <select id="expertiseArea">
+                <option value="crop">Crop Issues</option>
+                <option value="soil">Soil Quality</option>
+                <option value="pest">Pest Control</option>
+                <option value="climate">Climate Adaptation</option>
+            </select>
+
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" id="preferredDate" required>
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" rows="4"></textarea>
+
+            <button type="submit">Book Consultation</button>
+        </form>
+    </main>
+
+    <script src="expert.js"></script>
+</body>
+</html>

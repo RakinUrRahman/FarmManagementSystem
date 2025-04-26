@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Score</title>
+    <link rel="stylesheet" href="sustainability.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="#">Crop Management</a></li>
+            <li><a href="#">Task Automation</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Data Analytics & Reports</a></li>
+            <li><a href="#">Marketplace Integration</a></li>
+            <li><a href="#">Community Forum & Chat</a></li>
+            <li><a href="expert.html">Expert Consultation</a></li>
+            <li><a href="#">Sustainability Score</a></li>
+            <li><a href="#">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Sustainability Score for Rooftop Smart Farming</h2>
+        <p>Evaluate your rooftop farm's sustainability practices and get recommendations to improve eco-friendly farming.</p>
+
+        <div class="form-section">
+            <h3>Enter Rooftop Farm Details</h3>
+            <form id="sustainabilityForm">
+                <!-- Farm Area -->
+                <label for="farmSize">Farm Area (Square Meters):</label>
+                <input type="number" id="farmSize" name="farmSize" placeholder="Enter the rooftop area in square meters" required>
+
+                <!-- Plant Types -->
+                <label for="plantTypes">Plant Types:</label>
+                <select id="plantTypes" name="plantTypes" required>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="herbs">Herbs</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="flowers">Flowers</option>
+                    <option value="mixed">Mixed Plants</option>
+                </select>
+
+                <!-- Smart Irrigation -->
+                <label for="irrigation">Smart Irrigation System:</label>
+                <select id="irrigation" name="irrigation" required>
+                    <option value="drip">Drip Irrigation</option>
+                    <option value="sprinkler">Sprinkler System</option>
+                    <option value="misting">Misting System</option>
+                    <option value="none">No Irrigation</option>
+                </select>
+
+                <!-- Vertical Farming Options -->
+                <label for="verticalFarming">Vertical Farming Setup:</label>
+                <select id="verticalFarming" name="verticalFarming" required>
+                    <option value="yes">Yes, I have vertical farming</option>
+                    <option value="no">No, I do not use vertical farming</option>
+                </select>
+
+                <!-- Automated Sensors -->
+                <label for="sensors">Automated Sensors for Monitoring:</label>
+                <select id="sensors" name="sensors" required>
+                    <option value="temperature">Temperature Sensors</option>
+                    <option value="humidity">Humidity Sensors</option>
+                    <option value="moisture">Soil Moisture Sensors</option>
+                    <option value="none">No Automated Sensors</option>
+                </select>
+
+                <!-- Harvest Frequency -->
+                <label for="harvestFrequency">Harvest Frequency (per Year):</label>
+                <input type="number" id="harvestFrequency" name="harvestFrequency" placeholder="How often do you harvest?" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Farm Details</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="sustainability.js"></script>
+</body>
+</html>
