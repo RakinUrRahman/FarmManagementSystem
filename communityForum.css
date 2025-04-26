@@ -98,83 +98,33 @@
     font-size: 1.1em;
 }
 
-/* Task Input Form */
-.task-form {
+.forum-input {
     margin-top: 20px;
 }
 
-.task-form h3 {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-.task-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.task-form input[type="text"],
-.task-form input[type="time"] {
+textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.task-form button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.task-form button:hover {
-    background-color: #388E3C;
-}
-
-/* Task Output */
-.task-output {
-    margin-top: 20px;
-}
-
-#taskOutputList {
-    list-style-type: none;
-}
-
-#taskOutputList li {
-    margin: 10px 0;
-    background-color: #e8f5e9;
+    height: 120px;
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
 }
 
-#backButton {
-    margin-top: 20px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
+button {
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
-    cursor: pointer;
-}
-
-#backButton:hover {
-    background-color: #388E3C;
-}
-
-/* Button Styling */
-button {
-    padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    background-color: #2E7D32;
-    color: white;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #1B5E20;
+    background-color: #388E3C;
+}
+
+.forum-output p {
+    margin-top: 20px;
 }

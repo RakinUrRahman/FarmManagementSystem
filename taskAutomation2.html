@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Automation</title>
+    <title>Task Automation - Output</title>
     <link rel="stylesheet" href="taskAutomation.css">
 </head>
 <body>
@@ -34,26 +34,19 @@
     </nav>
 
     <main class="main-content">
-        <h2>Task Automation</h2>
-        <p>Manage farming tasks such as watering, pest control, and harvesting reminders.</p>
+        <h2>Task Automation Output</h2>
+        <p>View the tasks you've inputted below.</p>
         
-        <!-- Task Input Form -->
-        <div class="task-form">
-            <h3>Add New Task</h3>
-            <form id="taskForm">
-                <label for="taskName">Task Name:</label>
-                <input type="text" id="taskName" required>
-                <label for="taskDescription">Task Description:</label>
-                <input type="text" id="taskDescription" required>
-                <label for="taskTime">Task Time (HH:MM):</label>
-                <input type="time" id="taskTime" required>
-                <button type="submit">Save Task</button>
-            </form>
+        <div class="task-output">
+            <h3>Task Output Details</h3>
+            <ul id="taskOutputList">
+                <!-- Task output details will be displayed here -->
+            </ul>
         </div>
 
-        <button id="showOutputButton">Show Output</button>
+        <button id="backButton">Back to Task Automation</button>
     </main>
 
-    <script src="taskAutomation.js"></script>
+    <script src="taskAutomation2.js"></script>
 </body>
 </html>
