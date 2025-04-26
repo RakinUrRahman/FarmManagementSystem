@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmo Dashboard</title>
+    <link rel="stylesheet" href="taskAutomation.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="#">Crop Management</a></li>
+            <li><a href="taskAutomation.html">Task Automation</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Data Analytics & Reports</a></li>
+            <li><a href="#">Marketplace Integration</a></li>
+            <li><a href="#">Community Forum & Chat</a></li>
+            <li><a href="#">Expert Consultation</a></li>
+            <li><a href="#">Sustainability Score</a></li>
+            <li><a href="#">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <!-- Add this code to your Task Automation page -->
+    <main class="main-content">
+        <h2>Task Automation</h2>
+        <p>Manage your farm tasks, set reminders for watering, pest control, and harvesting.</p>
+    
+        <!-- Task List Table -->
+        <div class="task-list">
+            <button id="addTaskButton" class="modern-button">+ Add New Task</button>
+    
+            <table class="task-table">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="taskList">
+                    <!-- Task rows will appear here -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Add/Edit Task Form -->
+        <div id="taskFormContainer" class="task-form-container">
+            <h3 id="formTitle">Add New Task</h3>
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Task Name" required />
+                <input type="datetime-local" id="taskTime" required />
+                <select id="taskType">
+                    <option value="watering">Watering</option>
+                    <option value="pest_control">Pest Control</option>
+                    <option value="harvesting">Harvesting</option>
+                </select>
+                <div class="form-buttons">
+                    <button type="submit" class="modern-button green">Save Task</button>
+                    <button type="button" id="cancelTaskButton" class="modern-button gray">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+
+
+
+    <script src="taskAutomation.js"></script>
+</body>
+</html>

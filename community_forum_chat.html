@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum & Chat - Farmo Dashboard</title>
+    <link rel="stylesheet" href="community_forum_chat.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="crop_management.html">Crop Management</a></li>
+            <li><a href="task_automation.html">Task Automation</a></li>
+            <li><a href="weather_insights.html">Weather Insights</a></li>
+            <li><a href="data_analytics_reports.html">Data Analytics & Reports</a></li>
+            <li><a href="marketplace_integration.html">Marketplace Integration</a></li>
+            <li><a href="community_forum_chat.html">Community Forum & Chat</a></li>
+            <li><a href="expert_consultation.html">Expert Consultation</a></li>
+            <li><a href="sustainability_score.html">Sustainability Score</a></li>
+            <li><a href="supply_chain_management.html">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Community Forum & Chat</h2>
+        <p>Welcome to the Community Forum & Chat. Here, farmers can ask questions, share experiences, and collaborate with each other.</p>
+
+        <div class="forum-section">
+            <h3>Discussion Threads</h3>
+            <div class="thread-list">
+                <div class="thread">
+                    <h4>How to improve crop yield during monsoon season?</h4>
+                    <p>Started by: <strong>Farmer123</strong> | Replies: 5</p>
+                    <button class="view-thread-btn">View Thread</button>
+                </div>
+                <div class="thread">
+                    <h4>Best organic fertilizers for rice farming</h4>
+                    <p>Started by: <strong>AgriExpert</strong> | Replies: 3</p>
+                    <button class="view-thread-btn">View Thread</button>
+                </div>
+                <!-- More threads can be added here -->
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <h3>Real-Time Chat</h3>
+            <div class="chat-box">
+                <div class="messages" id="chatMessages">
+                    <!-- Chat messages will be dynamically added here -->
+                </div>
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button id="sendMessageBtn">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="community_forum_chat.js"></script>
+</body>
+</html>

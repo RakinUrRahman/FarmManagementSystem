@@ -34,8 +34,66 @@
     </nav>
 
     <main class="main-content">
-        <h2>Welcome to Farmo Dashboard!</h2>
-        <p>Select a section from the sidebar to begin managing your farm efficiently.</p>
+        <div class="dashboard-header">
+            <h2>Dashboard</h2>
+            <div id="currentDate"></div>
+            <button id="customizeButton">Customize Dashboard</button>
+        </div>
+
+        <div class="cards-container">
+            <!-- Crop Health -->
+            <div class="card" id="cropHealthCard">
+                <h3>Crop Health 🌾</h3>
+                <p>Good (98% healthy)</p>
+            </div>
+
+            <!-- Resource Usage -->
+            <div class="card" id="resourceUsageCard">
+                <h3>Resource Usage 💧</h3>
+                <p>Water Usage: 70%</p>
+            </div>
+
+            <!-- Weather Updates -->
+            <div class="card" id="weatherUpdatesCard">
+                <h3>Weather Updates 🌤️</h3>
+                <p id="weatherInfo">Loading weather...</p>
+                <input type="text" id="cityInput" placeholder="Enter city">
+                <button id="citySearchButton">Search</button>
+            </div>
+
+            <!-- Livestock -->
+            <div class="card" id="livestockCard">
+                <h3>Livestock 🐄</h3>
+                <p>Total Livestock: 120</p>
+            </div>
+
+            <!-- Revenue -->
+            <div class="card" id="revenueCard">
+                <h3>Revenue This Month 💰</h3>
+                <p>$5,500</p>
+            </div>
+
+            <!-- Alerts -->
+            <div class="card" id="alertsCard">
+                <h3>Alerts ⚠️</h3>
+                <p>Soil moisture low, consider irrigation.</p>
+            </div>
+        </div>
+
+        <!-- Modal for customization -->
+        <div id="customizeModal" class="modal">
+            <div class="modal-content">
+                <h3>Customize Dashboard</h3>
+                <label><input type="checkbox" id="toggleCropHealth" checked> Crop Health</label><br>
+                <label><input type="checkbox" id="toggleResourceUsage" checked> Resource Usage</label><br>
+                <label><input type="checkbox" id="toggleWeatherUpdates" checked> Weather Updates</label><br>
+                <label><input type="checkbox" id="toggleLivestock" checked> Livestock</label><br>
+                <label><input type="checkbox" id="toggleRevenue" checked> Revenue</label><br>
+                <label><input type="checkbox" id="toggleAlerts" checked> Alerts</label><br>
+                <button id="saveSettings">Save</button>
+                <button id="closeModal">Cancel</button>
+            </div>
+        </div>
     </main>
 
     <script src="index.js"></script>
