@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooftop Farm Management</title>
+    <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="farmLogo.png" alt="Farmo Logo">
+            <h1>Farmo</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button id="languageButton">Change Language</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Crop Management</a></li>
+            <li><a href="#">Task Automation</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Data Analytics & Reports</a></li>
+            <li><a href="#">Marketplace Integration</a></li>
+            <li><a href="#">Community Forum & Chat</a></li>
+            <li><a href="#">Expert Consultation</a></li>
+            <li><a href="#">Sustainability Score</a></li>
+            <li><a href="#">Supply Chain Management</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Data Analytics & Reports</h2>
+
+        <form id="farmForm" class="form-container">
+            <div class="form-group">
+                <label for="cropName">Crop Name:</label>
+                <input type="text" id="cropName" name="cropName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Planted Area (m²):</label>
+                <input type="number" id="area" name="area" required>
+            </div>
+
+            <div class="form-group">
+                <label for="yield">Expected Yield (kg):</label>
+                <input type="number" id="yield" name="yield" required>
+            </div>
+
+            <div class="form-group">
+                <label for="waterUsage">Water Usage (liters):</label>
+                <input type="number" id="waterUsage" name="waterUsage" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fertilizer">Fertilizer Used (kg):</label>
+                <input type="number" id="fertilizer" name="fertilizer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plantingDate">Planting Date:</label>
+                <input type="date" id="plantingDate" name="plantingDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="healthStatus">Health Status:</label>
+                <select id="healthStatus" name="healthStatus" required>
+                    <option value="">Select Status</option>
+                    <option value="Healthy">Healthy</option>
+                    <option value="Needs Attention">Needs Attention</option>
+                    <option value="Critical">Critical</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Data</button>
+        </form>
+
+        <section id="chartSection" style="display: none;">
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="healthPieChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h4>Crop Yield Distribution</h4>
+                <canvas id="cropYieldChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h4>Resource Usage</h4>
+                <canvas id="resourceUsageChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h4>Farm Health Over Time</h4>
+                <canvas id="farmHealthChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+</body>
+</html>

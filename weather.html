@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooftop Farm Management - Weather Insights</title>
+    <link rel="stylesheet" href="weather.css"> <!-- Correct link to CSS -->
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>Rooftop Farm Management</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search...">
+            <button id="languageButton">EN</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Weather Insights</a></li>
+            <li><a href="#">Crop Planning</a></li>
+            <li><a href="#">Irrigation Control</a></li>
+            <li><a href="#">Harvest Tracking</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h2>Weather Insights</h2>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="locationInput">Enter Your Location:</label>
+                <input type="text" id="locationInput" placeholder="City Name">
+            </div>
+            <div class="form-group">
+                <label for="dateInput">Select Date:</label>
+                <input type="date" id="dateInput">
+            </div>
+            <button id="fetchWeatherBtn">Get Weather Insights</button>
+        </div>
+
+        <div id="chartSection">
+            <div class="chart-container">
+                <h3>Weather Forecast</h3>
+                <p id="weatherDetails">No weather data yet.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Suggested Activities</h3>
+                <p id="activitySuggestions">No suggestions available.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script> <!-- Correct link to JavaScript -->
+</body>
+</html>
