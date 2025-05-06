@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crop Management</title>
+  <link rel="stylesheet" href="crop-management.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Farmo Crop Management</h1>
+</header>
+
+<main class="main-content">
+  <section class="crop-form-section">
+    <h2>Add / Update Crop Details</h2>
+    <form id="cropForm">
+      <input type="text" id="cropType" placeholder="Crop Type" required>
+      <input type="date" id="plantingDate" required>
+      <input type="text" id="growthStage" placeholder="Growth Stage (e.g., Seeding, Vegetative)" required>
+      <input type="date" id="wateringSchedule" placeholder="Next Watering Date" required>
+      <input type="date" id="fertilizationDate" placeholder="Next Fertilization Date" required>
+      <input type="date" id="harvestingDate" placeholder="Expected Harvesting Date" required>
+      <button type="submit">Save Crop</button>
+    </form>
+  </section>
+
+  <section class="crop-list-section">
+    <h2>Your Crops</h2>
+    <div id="cropList"></div>
+  </section>
+</main>
+
+<script src="crop-management.js"></script>
+
+</body>
+</html>
