@@ -70,13 +70,28 @@
                     <option value="no">No, I do not use vertical farming</option>
                 </select>
 
-                <!-- Automated Sensors -->
-                <label for="sensors">Automated Sensors for Monitoring:</label>
-                <select id="sensors" name="sensors" required>
-                    <option value="temperature">Temperature Sensors</option>
-                    <option value="humidity">Humidity Sensors</option>
-                    <option value="moisture">Soil Moisture Sensors</option>
-                    <option value="none">No Automated Sensors</option>
+                <!-- Energy Source -->
+                <label for="energySource">Energy Source:</label>
+                <select id="energySource" name="energySource" required>
+                    <option value="solar">Solar</option>
+                    <option value="wind">Wind</option>
+                    <option value="grid">Grid</option>
+                    <option value="none">None</option>
+                </select>
+
+                <!-- Water Recycling System -->
+                <label for="waterRecycling">Water Recycling System:</label>
+                <select id="waterRecycling" name="waterRecycling" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- Fertilizer Usage -->
+                <label for="fertilizerUsage">Fertilizer Usage:</label>
+                <select id="fertilizerUsage" name="fertilizerUsage" required>
+                    <option value="organic">Organic Fertilizers</option>
+                    <option value="chemical">Chemical Fertilizers</option>
+                    <option value="none">No Fertilizers</option>
                 </select>
 
                 <!-- Harvest Frequency -->
@@ -90,5 +105,15 @@
     </main>
 
     <script src="sustainability.js"></script>
+    <!-- Modal for displaying results -->
+<!-- Modal for displaying results -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span> <!-- Close icon -->
+        <div id="modalContent"></div> <!-- This will display the result message -->
+        <button id="modalButton">Close</button> <!-- Close button inside the modal -->
+    </div>
+</div>
+
 </body>
 </html>
