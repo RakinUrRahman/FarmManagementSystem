@@ -48,7 +48,7 @@ function clearForm() {
 }
 
 function showCharts(dataList) {
-    const labels = dataList.map(d => ${d.cropName} (${d.plantingDate}));
+    const labels = dataList.map(d => `${d.cropName} (${d.plantingDate})`);
 
     const barData = {
         labels: labels,
@@ -103,6 +103,6 @@ function showCharts(dataList) {
         options: {
             responsive: true,
             maintainAspectRatio: false
-        }
-    });
+        }
+    });
 }
