@@ -12,16 +12,38 @@
   <h1>Farmo Crop Management</h1>
 </header>
 
+
+<nav class="sidebar">
+  <ul>
+     <li><a href="index.html">Dashboard</a></li>
+      <li><a href="crop-management.html">Crop Management</a></li>
+      <li><a href="taskAutomation.html">Task Automation</a></li>
+      <li><a href="weather.html">Weather Insights</a></li>
+      <li><a href="analytics.html">Data Analytics & Reports</a></li>
+      <!-- <li><a href="#">Marketplace Integration</a></li> -->
+      <li><a href="communityForum.html">Community Forum & Chat</a></li>
+      <li><a class="active" href="expert.html">Expert Consultation</a></li>
+      <li><a href="sustainability.html">Sustainability Score</a></li>
+      <li><a href="supply.html">Supply Chain Management</a></li> 
+  </ul>
+</nav>
+
 <main class="main-content">
   <section class="crop-form-section">
     <h2>Add / Update Crop Details</h2>
     <form id="cropForm">
       <input type="text" id="cropType" placeholder="Crop Type" required>
-      <input type="date" id="plantingDate" required>
+      <input type="date" id="plantingDate " required>
       <input type="text" id="growthStage" placeholder="Growth Stage (e.g., Seeding, Vegetative)" required>
-      <input type="date" id="wateringSchedule" placeholder="Next Watering Date" required>
-      <input type="date" id="fertilizationDate" placeholder="Next Fertilization Date" required>
-      <input type="date" id="harvestingDate" placeholder="Expected Harvesting Date" required>
+      <label for="wateringSchedule">Next Watering Date:</label>
+      <input type="date" id="wateringSchedule" required>
+      
+      <label for="fertilizationDate">Next Fertilization Date:</label>
+      <input type="date" id="fertilizationDate" required>
+      
+      <label for="harvestingDate">Expected Harvesting Date:</label>
+      <input type="date" id="harvestingDate" required>
+      
       <button type="submit">Save Crop</button>
     </form>
   </section>

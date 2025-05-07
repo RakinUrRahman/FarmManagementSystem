@@ -7,13 +7,17 @@ body {
   .header {
     background-color: #4CAF50;
     color: white;
+    margin-left: 250px; /* Add this if you want the header aligned with main content */
+
     padding: 20px;
     text-align: center;
   }
   
   .main-content {
     padding: 20px;
+    margin-left: 250px; /* Add this to make space for sidebar */
   }
+  
   
   .crop-form-section, .crop-list-section {
     background: white;
@@ -49,4 +53,35 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
   }
-  
+  /* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2E7D32;
+  height: 100vh;
+  padding-top: 40px;
+  position: fixed;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #388E3C;
+  transform: translateX(10px);
+}
