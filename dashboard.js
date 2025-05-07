@@ -71,3 +71,18 @@ closeNotificationModal.addEventListener('click', () => {
 });
 
 window.addEventListener('load', showNotifications);
+document.getElementById('weatherSummary').addEventListener('mouseover', () => {
+    document.getElementById('weatherSummary').textContent = "Today: Sunny, 32°C";
+  });
+  document.querySelectorAll('.task-check').forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        this.parentElement.style.textDecoration = 'line-through';
+        this.parentElement.style.color = 'gray';
+      } else {
+        this.parentElement.style.textDecoration = 'none';
+        this.parentElement.style.color = 'black';
+      }
+    });
+  });
+  

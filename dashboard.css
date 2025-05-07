@@ -248,3 +248,15 @@
 #closeNotificationModal:hover {
     background-color: #388E3C;
 }
+.weather-details {
+    display: none;
+    background-color: #eef;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  .weather-widget:hover .weather-details {
+    display: block;
+  }
+  
