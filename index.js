@@ -1,47 +1,32 @@
-// Weather API
-const apiKey = 'YOUR_API_KEY'; // Replace this with your real API Key
-const weatherInfo = document.getElementById('weatherInfo');
-const cityInput = document.getElementById('cityInput');
-const citySearchButton = document.getElementById('citySearchButton');
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-// Default city to load
-let currentCity = 'Dhaka';
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value.trim();
+    var role = document.querySelector('input[name="role"]:checked');
 
-// Function to fetch weather
-async function fetchWeather(city) {
-    try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-        const data = await response.json();
+    var message = document.getElementById('message');
 
-        if (data.cod === 200) {
-            weatherInfo.innerHTML = `${city}: ${data.weather[0].description} 🌤️ ${data.main.temp}°C`;
-        } else {
-            weatherInfo.innerHTML = 'City not found 🌧️';
-        }
-    } catch (error) {
-        weatherInfo.innerHTML = 'Error fetching weather ❌';
+    if (!role) {
+        message.textContent = "Please select a role.";
+        return;
     }
-}
 
-// Load default weather
-fetchWeather(currentCity);
-
-// Search new city
-citySearchButton.addEventListener('click', () => {
-    const city = cityInput.value.trim();
-    if (city) {
-        fetchWeather(city);
+    // Redirect to dashboard after successful login
+    if (username === "f" && password === "1234" && role.value === "farmer") {
+        message.style.color = "green";
+        message.textContent = "Welcome, Farmer!";
+        setTimeout(function() {
+            window.location.href = "dashboard.html";  // Redirect to farmer dashboard
+        }, 1000);  // 1-second delay for message display
+    } else if (username === "c" && password === "1234" && role.value === "consultant") {
+        message.style.color = "green";
+        message.textContent = "Welcome, Consultant!";
+        setTimeout(function() {
+            window.location.href = "dashboard.html"; // Correct if in the same directory
+        }, 1000);  // 1-second delay for message display
+    } else {
+        message.style.color = "red";
+        message.textContent = "Invalid credentials.";
     }
 });
-
-// Optional: allow pressing "Enter" key too
-cityInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        const city = cityInput.value.trim();
-        if (city) {
-            fetchWeather(city);
-        }
-    }
-});
-
-// Display current date and

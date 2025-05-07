@@ -1,0 +1,203 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right input[type="text"] {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#languageButton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2E7D32;
+    color: white;
+    cursor: pointer;
+}
+
+#languageButton:hover {
+    background-color: #1B5E20;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #2E7D32;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #388E3C;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    color: #4CAF50;
+}
+
+#currentDate {
+    font-size: 1.1em;
+    color: #4CAF50;
+}
+
+#customizeButton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFA726;
+    color: white;
+    cursor: pointer;
+}
+
+#customizeButton:hover {
+    background-color: #FB8C00;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+}
+
+/* Weather Card */
+#cityInput {
+    margin-top: 10px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#citySearchButton {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#citySearchButton:hover {
+    background-color: #388E3C;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #388E3C;
+}
