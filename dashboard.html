@@ -1,120 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmo Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmo Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="farmLogo.png" alt="Farmo Logo">
-            <h1>Farmo</h1>
-        </div>
-        <div class="header-right">
-            <input type="text" placeholder="Search..." id="searchBox">
-            <button id="languageButton">Change Language</button>
-        </div>
-    </header>
-
-    <nav class="sidebar">
-        <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="crop-management.html">Crop Management</a></li>
-            <li><a href="taskAutomation.html">Task Automation</a></li>
-            <li><a href="weather.html">Weather Insights</a></li>
-            <li><a href="analytics.html">Data Analytics & Reports</a></li>
-            <!-- <li><a href="#">Marketplace Integration</a></li> -->
-            <li><a href="communityForum.html">Community Forum & Chat</a></li>
-            <li><a class="active" href="expert.html">Expert Consultation</a></li>
-            <li><a href="sustainability.html">Sustainability Score</a></li>
-            <li><a href="supplyChainManagement.html">Supply Chain Management</a></li>
-            <li><a href="index.html">Log Out</a></li>
-
-        </ul>
-    </nav>
-
-    <main class="main-content">
-        <div class="dashboard-header">
-            <h2>Dashboard</h2>
-            <div id="currentDate"></div>
-            <button id="customizeButton">Customize Dashboard</button>
-        </div>
-
-        <div class="cards-container">
-            <!-- Crop Health -->
-            <div class="card" id="cropHealthCard">
-                <h3>Crop Health 🌾</h3>
-                <p>Good (98% healthy)</p>
-            </div>
-
-            <!-- Resource Usage -->
-            <div class="card" id="resourceUsageCard">
-                <h3>Resource Usage 💧</h3>
-                <p>Water Usage: 70%</p>
-            </div>
-
-            <!-- Weather Updates -->
-            <div class="card" id="weatherUpdatesCard">
-                <h3>Weather Updates 🌤️</h3>
-                <p id="weatherInfo">Loading weather...</p>
-                <input type="text" id="cityInput" placeholder="Enter city">
-                <button id="citySearchButton">Search</button>
-            </div>
-
-            <!-- Livestock -->
-            <div class="card">
-                <h3>Crop Distribution 🌱</h3>
-                <canvas id="cropChart" width="300" height="200"></canvas>
-            </div>
-
-            <!-- Revenue -->
-            <div class="card" id="revenueCard">
-                <h3>Revenue This Month 💰</h3>
-                <p>৳ 5,5000</p>
-            </div>
-
-            <!-- Alerts -->
-            <div class="card" id="alertsCard">
-                <h3>Alerts ⚠️</h3>
-                <p>Soil moisture low, consider irrigation.</p>
-            </div>
-        </div>
-
-        
-
-        <!-- Modal for customization -->
-        <div id="customizeModal" class="modal">
-            <div class="modal-content">
-                <h3>Customize Dashboard</h3>
-                <label><input type="checkbox" id="toggleCropHealth" checked> Crop Health</label><br>
-                <label><input type="checkbox" id="toggleResourceUsage" checked> Resource Usage</label><br>
-                <label><input type="checkbox" id="toggleWeatherUpdates" checked> Weather Updates</label><br>
-                <label><input type="checkbox" id="toggleLivestock" checked> Livestock</label><br>
-                <label><input type="checkbox" id="toggleRevenue" checked> Revenue</label><br>
-                <label><input type="checkbox" id="toggleAlerts" checked> Alerts</label><br>
-                <button id="saveSettings">Save</button>
-                <button id="closeModal">Cancel</button>
-            </div>
-        </div>
-        <!-- Notification Modal -->
-
-
-    </main>
-    <!-- Notification Modal -->
-<div id="notificationModal" class="modal">
-    <div class="modal-content">
-        <h3>Notifications</h3>
-        <ul id="notificationList">
-            <!-- Notifications will be added dynamically here -->
-        </ul>
-        <button id="closeNotificationModal">Close</button>
+  <header class="header">
+    <div class="logo">
+      <img src="farmLogo.png" alt="Farmo Logo" />
+      <h1>Farmo</h1>
     </div>
-</div>
+    <div class="header-right">
+      <input type="text" placeholder="Search..." id="searchBox" />
+      <button id="languageButton">Change Language</button>
+    </div>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <nav class="sidebar">
+    <ul>
+      <li><a class="active" href="dashboard.html">Dashboard</a></li>
+      <li><a href="crop-management.html">Crop Management</a></li>
+      <li><a href="taskAutomation.html">Task Automation</a></li>
+      <li><a href="weather.html">Weather Insights</a></li>
+      <li><a href="analytics.html">Data Analytics & Reports</a></li>
+      <li><a href="communityForum.html">Community Forum & Chat</a></li>
+      <li><a href="expert.html">Expert Consultation</a></li>
+      <li><a href="sustainability.html">Sustainability Score</a></li>
+      <li><a href="supplyChainManagement.html">Supply Chain Management</a></li>
+      <li><a href="index.html">Log Out</a></li>
+    </ul>
+  </nav>
 
-    <script src="dashboard.js"></script>
+  <main class="main-content">
+    <div class="dashboard-header">
+      <h2>Dashboard</h2>
+      <div id="currentDate"></div>
+      <button id="customizeButton">Customize Dashboard</button>
+    </div>
+
+    <div class="cards-container">
+      <!-- New sections -->
+      <div class="card" id="plantingScheduleCard">
+        <h3>Planting Schedule 🌱</h3>
+        <p>Next crop: Tomatoes on May 15</p>
+      </div>
+
+      <div class="card" id="fertilizerScheduleCard">
+        <h3>Fertilizer Schedule 🧪</h3>
+        <p>Organic compost on May 10</p>
+      </div>
+
+      <div class="card" id="irrigationStatusCard">
+        <h3>Irrigation System 💧</h3>
+        <p>Status: Active — Auto mode</p>
+      </div>
+
+      <div class="card" id="pestControlCard">
+        <h3>Pest Control 🐛</h3>
+        <p>Neem spray applied on May 5</p>
+      </div>
+
+      <div class="card" id="harvestTrackerCard">
+        <h3>Harvest Tracker 🍅</h3>
+        <p>Last harvest: 15kg Spinach on May 1</p>
+      </div>
+
+      <div class="card" id="toolMaintenanceCard">
+        <h3>Tool Maintenance 🛠️</h3>
+        <p>Next: Pruning shears on May 12</p>
+      </div>
+    </div>
+
+    <!-- Customize Modal -->
+    <div id="customizeModal" class="modal">
+      <div class="modal-content">
+        <h3>Customize Dashboard</h3>
+        <label><input type="checkbox" id="togglePlanting" checked> Planting Schedule</label><br>
+        <label><input type="checkbox" id="toggleFertilizer" checked> Fertilizer Schedule</label><br>
+        <label><input type="checkbox" id="toggleIrrigation" checked> Irrigation System</label><br>
+        <label><input type="checkbox" id="togglePest" checked> Pest Control</label><br>
+        <label><input type="checkbox" id="toggleHarvest" checked> Harvest Tracker</label><br>
+        <label><input type="checkbox" id="toggleTools" checked> Tool Maintenance</label><br>
+        <button id="saveSettings">Save</button>
+        <button id="closeModal">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notificationModal" class="modal">
+      <div class="modal-content">
+        <h3>Notifications</h3>
+        <ul id="notificationList"></ul>
+        <button id="closeNotificationModal">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="dashboard.js"></script>
 </body>
 </html>
