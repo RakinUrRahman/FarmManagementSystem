@@ -29,7 +29,7 @@
             <li><a href="communityForum.html">Community Forum & Chat</a></li>
             <li><a class="active" href="expert.html">Expert Consultation</a></li>
             <li><a href="sustainability.html">Sustainability Score</a></li>
-            <li><a href="supply.html">Supply Chain Management</a></li>
+            <li><a href="supplyChainManagement.html">Supply Chain Management</a></li>
             <li><a href="index.html">Log Out</a></li>
 
         </ul>
@@ -64,15 +64,15 @@
             </div>
 
             <!-- Livestock -->
-            <div class="card" id="livestockCard">
-                <h3>Livestock 🐄</h3>
-                <p>Total Livestock: 120</p>
+            <div class="card">
+                <h3>Crop Distribution 🌱</h3>
+                <canvas id="cropChart" width="300" height="200"></canvas>
             </div>
 
             <!-- Revenue -->
             <div class="card" id="revenueCard">
                 <h3>Revenue This Month 💰</h3>
-                <p>$5,500</p>
+                <p>৳ 5,5000</p>
             </div>
 
             <!-- Alerts -->
@@ -81,6 +81,8 @@
                 <p>Soil moisture low, consider irrigation.</p>
             </div>
         </div>
+
+        
 
         <!-- Modal for customization -->
         <div id="customizeModal" class="modal">
@@ -96,7 +98,22 @@
                 <button id="closeModal">Cancel</button>
             </div>
         </div>
+        <!-- Notification Modal -->
+
+
     </main>
+    <!-- Notification Modal -->
+<div id="notificationModal" class="modal">
+    <div class="modal-content">
+        <h3>Notifications</h3>
+        <ul id="notificationList">
+            <!-- Notifications will be added dynamically here -->
+        </ul>
+        <button id="closeNotificationModal">Close</button>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="dashboard.js"></script>
 </body>
